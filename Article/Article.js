@@ -10,13 +10,29 @@ class Article {
     this.expandButton.textContent = 'expand';
     // Set a click handler on the expandButton reference, calling the expandArticle method.
     this.expandButton.addEventListener('click', () => this.expandArticle());
+
+    // create a close button
+    this.closeButton = document.createElement('span');
+    this.closeButton.classList.add('closeButton');
+    this.closeButton.textContent = 'closeX';
     this.domElement.appendChild(this.closeButton);
+    
+    this.closeButtonAction();
+
   }
 
   expandArticle() {
     // Using our reference to the domElement, toggle a class to expand or hide the article.
     this.domElement.classList.toggle('article-open');
     this.toggleButton();
+  }
+
+  // method for manipulating close button
+  closeButtonAction() {
+    const closeBtn = this.domElement.querySelector('.closeButton');
+    closeBtn.addEventListener('click', () => {
+      console.log(this.domElement)
+    })
   }
 
   // toggle button content
@@ -32,6 +48,7 @@ class Article {
   }
 }
 
+// 
 /* START HERE: 
 
 - Select all classes named ".article" and assign that value to the articles variable.  
