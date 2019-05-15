@@ -18,6 +18,12 @@ class Article {
 
   }
 
+  // initialize TimeLine Method
+  initTimeline(target) {
+    let timeline = new TimelineMax();
+    timeline.to(target, .5, {opacity:0, ease: Power4.easeInOut, x: -500, autoAlpha: 0 });
+  }
+
   // Button creator method
   buttonCreator() {
     this.closeButton = document.createElement('span');
@@ -36,7 +42,10 @@ class Article {
   closeButtonAction() {
     const closeBtn = this.domElement.querySelector('.closeButton');
     closeBtn.addEventListener('click', () => {
-      console.log(this.domElement)
+      this.initTimeline(this.domElement).hidden = true;
+      // this.domElement.hidden = true;
+
+      console.log(this.domElement.classList)
     })
   }
 
