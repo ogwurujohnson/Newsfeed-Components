@@ -28,7 +28,7 @@ class Article {
   buttonCreator() {
     this.closeButton = document.createElement('span');
     this.closeButton.classList.add('closeButton');
-    this.closeButton.textContent = 'closeX';
+    this.closeButton.textContent = 'X';
     this.domElement.appendChild(this.closeButton);
   }
 
@@ -42,10 +42,7 @@ class Article {
   closeButtonAction() {
     const closeBtn = this.domElement.querySelector('.closeButton');
     closeBtn.addEventListener('click', () => {
-      this.initTimeline(this.domElement).hidden = true;
-      // this.domElement.hidden = true;
-
-      console.log(this.domElement.classList)
+      this.initTimeline(this.domElement);
     })
   }
 

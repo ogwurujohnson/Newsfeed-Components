@@ -45,7 +45,7 @@
   position: fixed;
   top: 75px;
   left: 0;
-  width: 350px;
+  width: 0;
   height: 100vh;
   /* This give the height 100% of the screen or, '100% of View Height' */
   background-color: #81C784;
@@ -107,10 +107,15 @@
   top: 0;
   right: 0;
   font-size: 12px;
-  color: grey;
+  color: white;
   cursor: pointer;
   transform: translate(-50%);
   background-color: white;
+  background-color: red;
+  width: 2%;
+  height: 20%;
+  text-align: center;
+  border: 1px solid black;
 }
 .article-open {
   height: 400px;
