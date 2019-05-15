@@ -12,13 +12,18 @@ class Article {
     this.expandButton.addEventListener('click', () => this.expandArticle());
 
     // create a close button
+    
+    this.buttonCreator();
+    this.closeButtonAction();
+
+  }
+
+  // button creator method
+  buttonCreator() {
     this.closeButton = document.createElement('span');
     this.closeButton.classList.add('closeButton');
     this.closeButton.textContent = 'closeX';
     this.domElement.appendChild(this.closeButton);
-    
-    this.closeButtonAction();
-
   }
 
   expandArticle() {
