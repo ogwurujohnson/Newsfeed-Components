@@ -18,7 +18,7 @@ class Article {
 
   }
 
-  // button creator method
+  // Button creator method
   buttonCreator() {
     this.closeButton = document.createElement('span');
     this.closeButton.classList.add('closeButton');
